@@ -1,0 +1,51 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Third Party Services
+    |--------------------------------------------------------------------------
+    |
+    | This file is for storing the credentials for third party services such
+    | as Mailgun, Postmark, AWS and more. This file provides the de facto
+    | location for this type of information, allowing packages to have
+    | a conventional file to locate the various service credentials.
+    |
+    */
+
+    'mailgun' => [
+        'domain' => env('MAILGUN_DOMAIN'),
+        'secret' => env('MAILGUN_SECRET'),
+        'endpoint' => env('MAILGUN_ENDPOINT', 'api.mailgun.net'),
+    ],
+
+    'postmark' => [
+        'token' => env('POSTMARK_TOKEN'),
+    ],
+
+    'ses' => [
+        'key' => env('AWS_ACCESS_KEY_ID'),
+        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
+    ],
+
+    'facebook' => [
+        'client_id' => '563182901614653',
+        'client_secret' => '4b148524ef7da5b5945475e1f727e331',
+        'redirect' => 'http://localhost:8000/login/facebook/callback',
+    ],
+
+    'google' => [
+        'client_id' => '987105600430-aq00rapsjj4n6l261s01copfln4r45se.apps.googleusercontent.com',
+        'client_secret' => 'sxY8KyUM0tr8U1l42ofHfZEy',
+        'redirect' => 'http://localhost:8000/login/google/callback',
+    ],
+
+    'github' => [
+        'client_id' => 'd86ed68557d7ea993e0c',
+        'client_secret' => '9cdbfd0cbb3dbef919c1ba90ad47d5820e251181',
+        'redirect' => 'http://localhost:8000/login/github/callback',
+    ],
+
+];
